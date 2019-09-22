@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      About - Abdul Aziz Al Basyir
+    </title>
+    <link href="assets/css/helper.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+
+    <style>
+      * {
+        font-family: Roboto;
+      }
+      .nav {
+          min-height: 3rem;
+          width: 100%;
+          position: -webkit-sticky; /* Safari */
+          position: sticky;
+          top: 0;
+      }
+
+      .nav-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='figure' class='bg-second' style='background-position: center center'>
+      <div class='container'>
+        <div class='card'>
+          <div class='d-flex flex-warp-xs justify-content-center'>
+
+            <div class='pt-2 d-flex flex-column'>
+              <div class='py-2'>
+                <center>
+                  <img id='profile_image_place' height="200px" class='border-rounded shadow-1 ma-2'  />
+                </center>
+              </div>
+
+              <div class='bg-primary py-2 px-3'>
+                <h1 class='pa-0 ma-0' id='display_name_place'></h1>
+                <h2 class='pa-0 ma-0'>Software Developer</h2>
+              </div>
+            </div>
+
+            <div class='pa-3'>
+              <div id='my_info' class='text-white'>
+                <div class='py-3'>
+                  <b class='text-biggest'>Alamat</b>
+                  <div id='location_place' class='text-big'></div>
+                </div>
+
+                <div class='py-3'>
+                  <b class='text-biggest'>E-mail</b>
+                  <div class='text-big'>abdulazizalbasyir119@gmail.com</div>
+                </div>
+
+                <div class='py-3'>
+                  <b class='text-biggest'>Telpon</b>
+                  <div class='text-big'>+62 821-7585-****</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=' px-3 my-2 text-white'>
+            <p class='text-big text-center'>
+              Portfolio ini mengambarkan saya dengan sedikit keahlian dibidang web programming, proyek saya
+              tarakhir adalah membuat aplikasi kargo dan aktifitas umum kerjanya di backend dan mungkin saat portfolio ini di buat pun masih jauh
+              dari kata mahir.
+            </p>
+          </div>
+
+          <div class='d-flex flex-warp justify-content-center'>
+            <div class='my-1 py-2'>
+              <b class='text-white'>Share :</b>
+            </div>
+            <div class='ma-2'>
+              <button class='border-card pa-2 border-style-none'>Facebook</button>
+            </div>
+            <div class='ma-2'>
+              <button class='border-card pa-2 border-style-none'>Twitter</button>
+            </div>
+            <div class='ma-2'>
+              <button class='border-card pa-2 border-style-none'>Instagram</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='nav shadow-1' style='background: linear-gradient(40deg,#ffd86f,#fc6262)'>
+    </div>
+
+    <div>
+      <div class='container pa-3'>
+        <h2 class='text-center text-biggest'>Pengalaman</h2>
+        <div class='d-flex flex-warp-xs justify-content-center'>
+          <div class='bg-primary d-flex flex-column pa-4 mx-3'>
+            <div style='font-size: 4rem'>12</div>
+            <div>Proyeknya</div>
+          </div>
+
+          <div class='bg-second d-flex flex-column pa-4 mx-3'>
+            <div style='font-size: 4rem'>4</div>
+            <div>Kliennya</div>
+          </div>
+
+          <div class='bg-primary d-flex flex-column pa-4 mx-3'>
+            <div style='font-size: 4rem'>3.7 Th</div>
+            <div>Pengalaman Kerjanya</div>
+          </div>
+
+          <div class='bg-second d-flex flex-column pa-4 mx-3'>
+            <div style='font-size: 4rem'>D1</div>
+            <div>Tamatan Terakhirnya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/helper.js"></script>
+
+    <script type="text/javascript">
+      var user = getUser(7730180);
+
+      // tarok info di doc
+      selectID('profile_image_place').setAttribute('src', /* kekecilan APINYA : user.profile_image */ 'assets/img/me.jpg');
+      selectID('display_name_place').innerHTML =  user.display_name;
+      selectID('location_place').innerHTML = user.location;
+    </script>
+
+    <script type="text/javascript">
+      backgroundDynamic(selectID('figure'))
+    </script>
+  </body>
+</html>
